@@ -115,7 +115,7 @@ h3 {
     <div class="loginBox">
         <div class="glass">
             <img src="Mia.png" class="Mia" width="95" height="95">
-            <h3>Cablevision Robles</h3>
+            <h3>Cablevision Robles 2.1</h3>
             <form>
                 <div class="inputBox">
                     <input type="text" name="" placeholder="&#128102;  Usuario" required autofocus>
