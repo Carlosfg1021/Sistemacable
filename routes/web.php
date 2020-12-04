@@ -22,3 +22,13 @@ Route::get('/clienteNuevo', function () {
 Route::get('/clienteIndex', function () {
     return view('cliente/index');
 });
+
+Route::get('/empleadoNuevo',function (){
+    return view('empleado/create');
+});
+
+Route::get('/empleadoIndex', function (){
+
+    return view('empleado/index');
+
+});
