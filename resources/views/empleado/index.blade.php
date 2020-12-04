@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-            <h3>Clientes</h3>
+            <h3>Empleados</h3>
             <a href="{{url('empleadoNuevo')}}"><button class="btn btn-primary">Nuevo Empleado</button></a>
         </div>
     </div>
