@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/clienteNuevo', function () {
     return view('cliente/create');
 });
+
+Route::get('/clienteIndex', function () {
+    return view('cliente/index');
+});
