@@ -32,3 +32,5 @@ Route::get('/empleadoIndex', function (){
     return view('empleado/index');
 
 });
+
+Route::resource('shows', 'ShowController');
