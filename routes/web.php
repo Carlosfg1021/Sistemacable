@@ -44,5 +44,13 @@ Route::get('/reparacionNuevo',function (){
     return view('reparacion/create');
 });
 
+Route::get('/servicioNuevo',function(){
+    return view('servicio/create');
+});
+
+Route::get('/servicioIndex',function (){
+   
+    return view('servicio/index');
+});
 
 Route::resource('shows', 'ShowController');

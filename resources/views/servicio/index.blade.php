@@ -3,8 +3,8 @@
 
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-            <h3>Reparaciones</h3>
-            <a href="{{url('reparacionNuevo')}}"><button class="btn btn-primary">Nueva Reparación</button></a>
+            <h3>Servicios</h3>
+            <a href="{{url('servicioNuevo')}}"><button class="btn btn-primary">Nuevo Servicio</button></a>
         </div>
     </div>
     <hr>
@@ -14,15 +14,15 @@
                 <table class="table table-striped table-bordered table-condensed table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>DESCRIPCIÓN</th>
                         <th>CLIENTE</th>
-                        <th>USUARIO</th>
-                        <th>ESTADO</th>
-                        <th>OPCIONES</th>
-                        
+                        <th>SERVICIO</th>
+                        <th>DESCRIPCION</th>
+                        <th>DIRECCION</th>
+                        <th>ESTADI</th>
                     </thead>
                     <!--foreach -->
                     <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
