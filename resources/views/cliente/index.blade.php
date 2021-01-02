@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <h3>Clientes</h3>
-            <a href="{{url('clienteNuevo')}}"><button class="btn btn-primary">Nuevo Cliente</button></a>
+            <a href="{{url('cliente_create')}}"><button class="btn btn-primary">Nuevo Cliente</button></a>
         </div>
     </div>
     <hr>
@@ -19,31 +19,31 @@
                         <th>NOMBRES</th>
                         <th>APELLIDOS</th>
                         <th>TELEFONO</th>
-                        <th>CORREO</th>
                         <th>PROPIEDAD</th>
                         <th>ESTADO</th>
                         <th>OPCIONES</th>
                     </thead>
-                    <!--foreach -->
+                    @foreach ($clientes as $cli)
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $cli->id_cliente }}</td>
+                        <td>{{ $cli->dpi }}</td>
+                        <td>{{ $cli->nit }}</td>
+                        <td>{{ $cli->nombre_cliente }}</td>
+                        <td>{{ $cli->apellido_cliente }}</td>
+                        <td>{{ $cli->telefono }}</td>
+                        <td>{{ $cli->propiedad }}</td>
+                        <td>{{ $cli->estado }}</td>
                         <td>
-                            <!--BOTONES DE OPCIONES-->
+                            <a href="{{ url('/cliente/'.$cli->id_cliente.'/edit')}}"><button class="btn btn-info">Editar</button></a>
+                            <a href=""><button class="btn btn-danger">Eliminar</button></a>
                         </td>
                     </tr>
 
-                    <!--endforeach-->
+                    @endforeach
 
                 </table>
             </div>
+            {{ $clientes->render() }}
         </div>
     </div>
 

@@ -88,13 +88,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('clienteIndex')}}" class="nav-link">
+                <a href="{{url('cliente_index')}}" class="nav-link">
                   <i class="far fa-user nav-icon"></i>
                   <p>Clientes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('clienteNuevo')}}" class="nav-link">
+                <a href="{{url('cliente_create')}}" class="nav-link">
                   <i class="far fa-user nav-icon"></i>
                   <p>Nuevo Cliente</p>
                 </a>

@@ -11,17 +11,14 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clienteNuevo', function () {
-    return view('cliente/create');
-});
-
-Route::get('/clienteIndex', function () {
-    return view('cliente/index');
-});
+Route::get('/cliente_create', 'ClienteController@create');
+Route::get('/cliente_index', 'ClienteController@index');
 
 Route::get('/empleadoNuevo',function (){
     return view('empleado/create');
@@ -54,3 +51,4 @@ Route::get('/servicioIndex',function (){
 });
 
 Route::resource('shows', 'ShowController');
+Route::resource('cliente', 'ClienteController');
