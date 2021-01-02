@@ -9,7 +9,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="form-group">
                 <label for="dpi">DPI</label>
-                <input type="number" id="dpu" name="dpi" required value="" class="form-control"
+                <input type="number" id="dpi" name="dpi" required value="{{ $cliente->dpi }}" class="form-control"
                     placeholder="Numero único de identificacion">
             </div>
         </div>
