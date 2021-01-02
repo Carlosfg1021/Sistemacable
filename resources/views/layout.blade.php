@@ -112,13 +112,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('servicioIndex')}}" class="nav-link">
+                  <i class="fas fa-user-check nav-icon"></i>
+                  <p>Servicios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('servicioNuevo')}}" class="nav-link">
                   <i class="fas fa-user-check nav-icon"></i>
                   <p>Nuevo Servicio</p>
                 </a>
               </li>
             </ul>
           </li>
+          
           <!-- Sidebar Menu de los servicios -->
           <li class="nav-item has-treeview menu-close">
             <a href="#" class="nav-link active">
@@ -136,7 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('reparacionIndex')}}" class="nav-link">
                   <i class="fas fa-user-cog nav-icon"></i>
                   <p>Reparacion</p>
                 </a>

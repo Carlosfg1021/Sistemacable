@@ -30,5 +30,25 @@ Route::get('/empleadoIndex', function (){
 
 });
 
+
+Route::get('/reparacionIndex', function (){
+
+    return view('reparacion/index');
+
+});
+
+Route::get('/reparacionNuevo',function (){
+    return view('reparacion/create');
+});
+
+Route::get('/servicioNuevo',function(){
+    return view('servicio/create');
+});
+
+Route::get('/servicioIndex',function (){
+   
+    return view('servicio/index');
+});
+
 Route::resource('shows', 'ShowController');
 Route::resource('cliente', 'ClienteController');
