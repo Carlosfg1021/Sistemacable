@@ -17,8 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cliente_create', 'ClienteController@create');
-Route::get('/cliente_index', 'ClienteController@index');
+//con este linea de codigo se crean todas las rutas necesarias del crud
+//para ver las rutas ejecutamos el comando:
+//php artisan route:list
+Route::resource('cliente', 'ClienteController');
 
 Route::get('/empleadoNuevo',function (){
     return view('empleado/create');
@@ -46,9 +48,9 @@ Route::get('/servicioNuevo',function(){
 });
 
 Route::get('/servicioIndex',function (){
-   
+
     return view('servicio/index');
 });
 
 Route::resource('shows', 'ShowController');
-Route::resource('cliente', 'ClienteController');
+

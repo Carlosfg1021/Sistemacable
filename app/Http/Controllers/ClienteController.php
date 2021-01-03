@@ -94,9 +94,9 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(RequestsClienteFormRequest $request, $cliente)
+    public function update(RequestsClienteFormRequest $request, $id)
     {
-        $cliente=Cliente::findOrFail($cliente);
+        $cliente=Cliente::findOrFail($id);
         $cliente->nombre_cliente=$request->get('nombre_cliente');
         $cliente->apellido_cliente=$request->get('apellido_cliente');
         $cliente->dpi=$request->get('dpi');
