@@ -1,7 +1,7 @@
 @extends ('layout')
 @section ('contenido')
 <div class="row">
-    <h3>Nuevo Cliente</h3>
+    <h3>Editar Cliente</h3>
 </div>
 <form action="{{ url('/cliente/' . $cliente->id_cliente) }}" method="post" enctype="multipart/form-data">
 {{csrf_field()}}
