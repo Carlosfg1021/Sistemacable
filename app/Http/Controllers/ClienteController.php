@@ -28,7 +28,6 @@ class ClienteController extends Controller
             $query=trim($request->get('searchText'));
             $clientes=DB::table('cliente')
             ->where('nombre_cliente','LIKE','%'.$query.'%')
-            ->where('estado','=','1')
             ->orderBy('id_cliente','desc')
             ->paginate(10);
 
@@ -66,7 +65,7 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        return Redirect::to('cliente_index');
+        return Redirect::to('cliente');
 
     }
 
@@ -103,12 +102,12 @@ class ClienteController extends Controller
         $cliente->nit=$request->get('nit');
         $cliente->telefono=$request->get('telefono');
         $cliente->propiedad=$request->get('propiedad');
-        $cliente->estado='1';
+        $cliente->estado=$request->get('estado');
         //falta fecha
 
         $cliente->update();
 
-        return Redirect::to('cliente_index');
+        return Redirect::to('cliente');
 
     }
 
@@ -121,10 +120,14 @@ class ClienteController extends Controller
     public function destroy($cliente)
     {
         $cliente=Cliente::findOrFail($cliente);
-        $cliente->estado='0';
+        if($cliente->estado == '1'){
+            $cliente->estado='0';
+        }else{
+            $cliente->estado='1';
+        }
 
         $cliente->update();
 
-        return Redirect::to('cliente_index');
+        return Redirect::to('cliente');
     }
 }
