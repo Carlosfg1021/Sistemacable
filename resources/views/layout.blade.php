@@ -89,37 +89,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{url('cliente')}}" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                  <i class="fas fa-user-check nav-icon"></i>
                   <p>Clientes</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{url('cliente/create')}}" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                  <i class="fas fa-user-check nav-icon"></i>
                   <p>Nuevo Cliente</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{url('empleadoIndex')}}" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                  <i class="fas fa-street-view nav-icon"></i>
                   <p>Empleados</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{url('empleadoNuevo')}}" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                  <i class="fas fa-street-view nav-icon"></i>
                   <p>Nuevo empleado</p>
                 </a>
               </li>
               <li class="nav-item">
+
                 <a href="{{url('servicio')}}" class="nav-link">
-                  <i class="fas fa-user-check nav-icon"></i>
+                  <i class="fas fa-tv nav-icon"></i>
+
                   <p>Servicios</p>
                 </a>
               </li>
               <li class="nav-item">
+
                 <a href="{{url('servicio/create')}}" class="nav-link">
-                  <i class="fas fa-user-check nav-icon"></i>
+                  <i class="fas fa-tv nav-icon"></i>
+
                   <p>Nuevo Servicio</p>
                 </a>
               </li>
@@ -138,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="fas fa-user-check nav-icon"></i>
+                  <i class="fas fa-wrench nav-icon"></i>
                   <p>Instalacion</p>
                 </a>
               </li>
@@ -146,6 +150,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="{{url('reparacionIndex')}}" class="nav-link">
                   <i class="fas fa-user-cog nav-icon"></i>
                   <p>Reparacion</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('cajaNueva')}}" class="nav-link">
+                  <i class="fas fa-credit-card nav-icon"></i>
+                  <p>Caja</p>
                 </a>
               </li>
             </ul>

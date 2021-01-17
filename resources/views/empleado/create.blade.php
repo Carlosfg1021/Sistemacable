@@ -2,7 +2,9 @@
 @section ('contenido')
 <div class="row">
         <h3>Nuevo Empleado</h3>
-	</div>
+</div>
+<form action="{{url('/empleado')}}" method="post" enctype="multipart/form-data">
+{{csrf_field()}}
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
@@ -37,7 +39,11 @@
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
             	<label for="correo">Usuario</label>
-            	<input type="text" name="usuario" value="" class="form-control" placeholder="Usuario de autenticacion">
+            	<select class="form-control" name="usuario">
+				<option>Administrador</option>
+                <option>Cobrador</option>
+                <option>Tecnico</option>
+            </select>
             </div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
