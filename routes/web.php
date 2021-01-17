@@ -22,8 +22,11 @@ Route::get('/', function () {
 //php artisan route:list
 Route::resource('cliente', 'ClienteController');
 
-Route::get('/empleadoNuevo',function (){
+
+Route::get('/empleadoNuevo', function (){
+
     return view('empleado/create');
+
 });
 
 Route::get('/empleadoIndex', function (){
@@ -31,7 +34,6 @@ Route::get('/empleadoIndex', function (){
     return view('empleado/index');
 
 });
-
 
 Route::get('/reparacionIndex', function (){
 
@@ -51,6 +53,11 @@ Route::get('/servicioIndex',function (){
 
     return view('servicio/index');
 });
+
+Route::get('/cajaNueva',function(){
+    return view('caja/create');
+});
+
 
 Route::resource('shows', 'ShowController');
 
