@@ -26,7 +26,6 @@ Route::resource('servicio', 'ServicioController');
 
 Route::resource('empleado', 'EmpleadoController');
 
-
 Route::get('/reparacionIndex', function (){
 
     return view('reparacion/index');

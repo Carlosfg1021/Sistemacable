@@ -64,7 +64,7 @@ class EmpleadoController extends Controller
         $empleado->usuario=$request->get('usuario');
         $empleado->contrasena=$request->get('contrasena');
         $empleado->estado='1';
-        //falta fecha
+        
 
         $empleado->save();
 
