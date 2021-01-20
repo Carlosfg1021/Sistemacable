@@ -61,12 +61,14 @@ class EmpleadoController extends Controller
         $empleado->dpi=$request->get('dpi');
         $empleado->telefono=$request->get('telefono');
         $empleado->direccion=$request->get('direccion');
+        $empleado->usuario=$request->get('usuario');
+        $empleado->contrasena=$request->get('contrasena');
         $empleado->estado='1';
         //falta fecha
 
         $empleado->save();
 
-        return Redirect::to('empleado_index');
+        return Redirect::to('empleado');
 
     }
 

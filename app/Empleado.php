@@ -19,7 +19,7 @@ class Empleado extends Model
         'estado',
         'fecha_commit',
         'usuario',
-        'contraseña'
+        'contrasena'
     ];
 
     protected $guarded = [];

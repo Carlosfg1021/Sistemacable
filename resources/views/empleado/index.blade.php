@@ -27,31 +27,37 @@
                         <th>DPI</th>
                         <th>DIRECCION</th>
                         <th>TELEFONO</th>
-                        <th>USUARIO</th>
-                        <th>CONTRASEÑA</th>
                         <th>ESTADO</th>
                         <th>OPCIONES</th>
                     </thead>
-                    <!--foreach -->
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <!--BOTONES DE OPCIONES-->
-                        </td>
-                    </tr>
+                    @foreach ($empleados as $cli)
+                <tr>
+                    <td>{{ $cli->id_usuario }}</td>
+                    <td>{{ $cli->nombre_empleado }}</td>
+                    <td>{{ $cli->apellido_empleado }}</td>
+                    <td>{{ $cli->dpi}} </td>
+                    <td>{{ $cli->telefono }}</td>
+                    <td>{{ $cli->direccion }}</td>
+                    <td>{{ $cli->estado }}</td>
+                    <td>
+                        <a href="{{ url('/empleado/'.$cli->id_usuario)}}"><button
+                                class="btn bg-purple">Ver</button></a>
+                        <a href="{{ url('/empleado/'.$cli->id_usuario.'/edit')}}"><button
+                                class="btn bg-olive">Editar</button></a>
+                        <form action="{{ url('/empleado/' . $cli->id_usuario) }}" method="post"
+                            enctype="multipart/form-data" style="display: inline;">
+                            {{csrf_field()}}
+                            {{method_field('DELETE')}}
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Seguro que deseas eliminar este registro?');">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
 
-                    <!--endforeach-->
+                @endforeach
 
                 </table>
             </div>
+            {{ $empleados->render() }}
         </div>
     </div>
 

@@ -24,17 +24,8 @@ Route::resource('cliente', 'ClienteController');
 
 Route::resource('servicio', 'ServicioController');
 
-Route::get('/empleadoNuevo',function (){
-  
-    return view('empleado/create');
+Route::resource('empleado', 'EmpleadoController');
 
-});
-
-Route::get('/empleadoIndex', function (){
-
-    return view('empleado/index');
-
-});
 
 Route::get('/reparacionIndex', function (){
 

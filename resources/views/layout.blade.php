@@ -100,13 +100,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('empleadoIndex')}}" class="nav-link">
+                <a href="{{url('empleado')}}" class="nav-link">
                   <i class="fas fa-street-view nav-icon"></i>
                   <p>Empleados</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('empleadoNuevo')}}" class="nav-link">
+                <a href="{{url('empleado/create')}}" class="nav-link">
                   <i class="fas fa-street-view nav-icon"></i>
                   <p>Nuevo empleado</p>
                 </a>
