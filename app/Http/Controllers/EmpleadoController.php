@@ -105,12 +105,14 @@ class EmpleadoController extends Controller
         $empleado->dpi=$request->get('dpi');
         $empleado->telefono=$request->get('telefono');
         $empleado->direccion=$request->get('direccion');
+        $empleado->usuario=$request->get('usuario');
+        $empleado->contrasena=$request->get('contrasena');
         $empleado->estado='1';
         //falta fecha
 
         $empleado->update();
 
-        return Redirect::to('empleado_index');
+        return Redirect::to('empleado');
 
     }
 
@@ -123,11 +125,15 @@ class EmpleadoController extends Controller
     public function destroy($empleado)
     {
         $empleado=Empleado::findOrFail($empleado);
-        $empleado->estado='0';
+        if($empleado->estado == '1'){
+            $empleado->estado='0';
+        }else{
+            $empleado->estado='1';
+        }
 
         $empleado->update();
 
-        return Redirect::to('empleado_index');
+        return Redirect::to('empleado');
     }
 
 

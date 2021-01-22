@@ -38,21 +38,28 @@
                     <td>{{ $cli->dpi}} </td>
                     <td>{{ $cli->telefono }}</td>
                     <td>{{ $cli->direccion }}</td>
-                    <td>{{ $cli->estado }}</td>
+                    @if($cli->estado == 0)
+                    <td class="text-danger">De baja</td>
+                    @elseif($cli->estado == 1)
+                    <td class="text-primary">De alta</td>
+                    @endif
                     <td>
-                        <a href="{{ url('/empleado/'.$cli->id_usuario)}}"><button
-                                class="btn bg-purple">Ver</button></a>
+                        <a href="{{ url('/empleado/'.$cli->id_usuario)}}"><button class="btn bg-purple">Ver</button></a>
                         <a href="{{ url('/empleado/'.$cli->id_usuario.'/edit')}}"><button
                                 class="btn bg-olive">Editar</button></a>
-                        <form action="{{ url('/empleado/' . $cli->id_usuario) }}" method="post"
-                            enctype="multipart/form-data" style="display: inline;">
-                            {{csrf_field()}}
-                            {{method_field('DELETE')}}
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Seguro que deseas eliminar este registro?');">Eliminar</button>
-                        </form>
+                        <a href="" data-target="#modal-delete-{{$cli->id_usuario}}" data-toggle="modal">
+                            <button class="btn btn-danger">
+                                @if($cli->estado == 0)
+                                Dar de Alta
+                                @elseif($cli->estado == 1)
+                                Dar de baja
+                                @endif
+                            </button>
+                        </a>
                     </td>
                 </tr>
 
+                @include('empleado.modal')
                 @endforeach
 
                 </table>
