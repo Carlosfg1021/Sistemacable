@@ -28,7 +28,6 @@ class EmpleadoController extends Controller
             $query=trim($request->get('searchText'));
             $empleados=DB::table('usuario')
             ->where('nombre_empleado','LIKE','%'.$query.'%')
-            ->where('estado','=','1')
             ->orderBy('id_usuario','desc')
             ->paginate(10);
 
@@ -64,7 +63,7 @@ class EmpleadoController extends Controller
         $empleado->usuario=$request->get('usuario');
         $empleado->contrasena=$request->get('contrasena');
         $empleado->estado='1';
-        
+
 
         $empleado->save();
 
